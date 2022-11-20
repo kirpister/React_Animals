@@ -1,83 +1,52 @@
 import React, { Component } from 'react';
-import { animals } from './animals.js';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Birds from './Birds.jsx';
 import './App.css';
-import Card from './Card.jsx';
+import About from './About.jsx';
+import Home from './Home.jsx';
+import Animals from './Animals.jsx';
+
 
 
 class App extends Component {
   
-  state = {
-    animals: animals,
-    search: '',
-  };
+render() {
 
-  addHandler = (name) => {
-    this.setState(state => {
-      const updatedArray = state.animals.map(animal => {
-        if (animal.name === name) {
-          return {...animal, likes: animal.likes + 1};
-        } else { return animal; }
-      });
-      return { animals: updatedArray, };
-    });
-    };
-
-    dislikeHandler = (name) => {
-      this.setState(state => {
-        const updatedArray = state.animals.map(animal => {
-          if (animal.name === name) {
-            return {...animal, likes: animal.likes - 1};
-          } else { return animal; }
-        });
-        return { animals: updatedArray, };
-      });
-    };
-
-  removeHandler = (name) => {
-    const updatedArray = this.state.animals.filter(animal => animal.name !== name);
-    this.setState({ animals: updatedArray });
-    };
-
-  searchHandler = (e) => {
-    this.setState({ search: e.target.value });
-    };
-
-  //if more than one liner curly brackets and return needed
   
-  render() {
-
-  const animalFilter = this.state.animals.filter(animal => { 
-    return animal.name
-    .toLowerCase()
-    .includes(this.state.search.toLowerCase());
-  });
-
-   const animalsList = animalFilter.map(animal => {
-      return <Card 
-      key={animal.name} 
-      name={animal.name} 
-      likes={animal.likes} 
-      removeCard={() => this.removeHandler(animal.name)} 
-      addLikes={() => this.addHandler(animal.name)}
-      removeLikes={() => this.dislikeHandler(animal.name)}
-      />});
-
   return (
-
-    <div>
-      <h1>{this.state.animals.length} Animals</h1>
-      <input type="text" placeholder='Search for Animal' onChange={this.searchHandler} />
-      
-      <div className='card-container'>
-        
-        {animalsList}
-      
-      </div>
-    </div>
-  );
-}};
+    <BrowserRouter>
+  <div>
+    
+    <nav>
+      <ul>
+       <li><Link to='/'>HOME</Link></li>
+       <li><Link to='/animals'>ANIMALS</Link></li>
+       <li><Link to='/birds'>BIRDS</Link></li>
+       <li><Link to='/about'>ABOUT</Link></li>
+      </ul>
+    </nav>
+    {/* <div className='images-cont'>
+    <div className='birds'><Link to='/birds'>BIRDS</Link></div>
+    <div className='animals'><Link to='/animals'>ANIMALS</Link></div>
+    </div> */}
+    
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/animals" element={<Animals />} />
+      <Route path="/birds" element={<Birds />} /> 
+      <Route path="/about" element={<About />} />
+    </Routes>
+    
+  </div> 
+  </BrowserRouter>
+)
+};
+}
 
 export default App;
+
+
+
 
 
 

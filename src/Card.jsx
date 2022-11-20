@@ -13,7 +13,6 @@ const Card = (props) => {
         <button className="dislike-btn" onClick={props.removeLikes}>Dislike</button>
         <button className="remove-btn" onClick={props.removeCard}>x</button>
         
-
         </div>
         
     );
