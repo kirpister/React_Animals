@@ -26,9 +26,17 @@ h1 {
 }
 
 h2 {
+  color: rgba(255, 255, 255, 0.751);
+  margin: 3%;
   text-align: center;
   text-transform: capitalize;
-  padding-top: 0.8rem;
+}
+
+h3 {
+  text-transform: capitalize;
+  text-align: center;
+  margin: 1rem;
+  font-size: 1.4rem;
 }
 
 p {
@@ -46,6 +54,8 @@ input {
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.113);
 }
+
+/* CARD STYLES */
 
 .about-p {
   text-align: center;
@@ -92,7 +102,7 @@ input {
 
 .dislike-btn {
   padding: 7px;
-  background-color: rgb(3, 3, 3);
+  background-color: rgba(3, 3, 3);
   border-radius: 7px;
   border: none;
   color: rgb(222, 219, 219);
@@ -114,6 +124,27 @@ input {
   right: 0.4rem;
 }
 
+/* HOME */
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  height: 55vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cat-img, 
+.bird-img {
+  width: 500px;
+  height: 350px;
+  border-radius: 1rem;
+  margin: 3rem;
+  filter:contrast(1.2);
+}
+
 /* NAVIGATION STYLES */
 
 nav {
@@ -124,11 +155,10 @@ ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: rgba(255, 255, 255, 0.728);
   text-decoration: none;
 }
-
 
 li {
   margin: 1rem;
@@ -142,36 +172,9 @@ a {
   color: rgba(255, 255, 255, 0.732);
 }
 
-.images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70vw;
-  height: 50vh;
-  margin: 0 auto;
-  position: relative;
-}
 
-.animal-link {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  z-index: 1;
-}
+ 
 
-.bird-link {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  z-index: 1;
-}
 
-.cat-img, 
-.bird-img {
-  width: 500px;
-  height: 350px;
-  border-radius: 1rem;
-  margin: 3rem;
-  filter:contrast(1.2);
-}
+
 

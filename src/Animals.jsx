@@ -64,7 +64,7 @@ class Animals extends Component {
         return (
 
         <div>
-            <h1>{this.state.animals.length} Animals</h1>
+            <h2>{this.state.animals.length} animals</h2>
 
             <input type="text" placeholder='Search for Animal' onChange={this.searchHandler} />
       

@@ -7,7 +7,7 @@ const Card = (props) => {
         <div className="card">
 
         <img src={`https://source.unsplash.com/500x400/?${props.name}`} alt="{props.name}"/>
-        <h2>{props.name}</h2>
+        <h3>{props.name}</h3>
         <p> &#10084; {props.likes}</p>
         <button className="like-btn" onClick={props.addLikes}>Like</button>
         <button className="dislike-btn" onClick={props.removeLikes}>Dislike</button>

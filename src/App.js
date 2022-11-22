@@ -25,10 +25,7 @@ render() {
        <li><Link to='/about'>ABOUT</Link></li>
       </ul>
     </nav>
-    {/* <div className='images-cont'>
-    <div className='birds'><Link to='/birds'>BIRDS</Link></div>
-    <div className='animals'><Link to='/animals'>ANIMALS</Link></div>
-    </div> */}
+   
     
     <Routes>
       <Route path="/" element={<Home />} />
