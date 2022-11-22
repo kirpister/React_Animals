@@ -66,7 +66,7 @@ class Animals extends Component {
         <div>
             <h2>{this.state.animals.length} animals</h2>
 
-            <input type="text" placeholder='Search for Animal' onChange={this.searchHandler} />
+            <input type="text" placeholder='Search for an Animal' onChange={this.searchHandler} />
       
             <div className='card-container'>
         
